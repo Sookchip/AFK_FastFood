@@ -1,0 +1,20 @@
+/* Khoảng cách giữa navbar và carousel */
+.hero-wrapper {
+  margin-top: 1rem; /* ~16px */
+  margin-bottom: 1rem;
+}
+
+/* Chiều cao & tỉ lệ ảnh */
+.carousel-img {
+  height: 450px;
+  object-fit: cover;
+}
+
+/* Style cho các nút điều hướng */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}

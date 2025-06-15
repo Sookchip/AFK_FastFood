@@ -1,0 +1,54 @@
+/* src/components/Navbar.css */
+
+/* Nền, chiều cao & padding */
+.custom-navbar {
+  background-color: #fbaa3e; /* Chỉnh nhẹ tone Figma nếu cần */
+  padding: 0.75rem 0;
+}
+
+/* Logo chữ hoặc ảnh */
+.custom-navbar .logo {
+  font-size: 1.5rem;
+  color: #000 !important;
+}
+
+/* Giãn đều các items chính giữa */
+.nav-center {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Link reset: font weight, màu sắc */
+.custom-navbar .nav-link {
+  color: #000 !important;
+  font-weight: 500;
+  padding: 0;
+}
+
+/* Hover & active màu trắng */
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #fff !important;
+}
+
+/* Giỏ hàng icon */
+.nav-icons .bi-cart3,
+.nav-icons .user-icon {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+/* Hover chuyển sang trắng */
+.nav-icons .bi-cart3:hover,
+.nav-icons .user-icon:hover {
+  color: #fff;
+}
+
+/* Badge đỏ nổi bật trên giỏ hàng */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  font-size: 0.6rem;
+  padding: 0.3rem 0.4rem;
+}

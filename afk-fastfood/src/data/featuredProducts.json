@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Gà Viên",
+    "desc": "Lắc vị cay hoặc sốt BBQ",
+    "price": 61000,
+    "image": "https://via.placeholder.com/300x200?text=Gà+Viên"
+  },
+  {
+    "id": 2,
+    "title": "Burger Bò",
+    "desc": "1 burger bò",
+    "price": 54000,
+    "image": "https://via.placeholder.com/300x200?text=Burger+Bò"
+  },
+  {
+    "id": 3,
+    "title": "Khoai Tây Chiên",
+    "desc": "Khoai tươi chiên giòn thấm dầu",
+    "price": 35000,
+    "image": "https://via.placeholder.com/300x200?text=Khoai+Tây+Chiên"
+  },
+  {
+    "id": 4,
+    "title": "Mì Ý",
+    "desc": "1 phần mì Ý",
+    "price": 40000,
+    "image": "https://via.placeholder.com/300x200?text=Mì+Ý"
+  }
+]
