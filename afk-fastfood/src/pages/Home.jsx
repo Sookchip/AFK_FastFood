@@ -1,14 +1,15 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import ProductCard from "../components/ProductCard";
+import { Link } from "react-router-dom";
 
+// Import ảnh món ăn từ thư mục assets/images
 import gaVienImg from "../assets/images/gavien.png";
 import burgerBoImg from "../assets/images/burger.png";
 import khoaiChienImg from "../assets/images/khoaitaychien.png";
 import miYImg from "../assets/images/miy.png";
 
-import { Link } from "react-router-dom";
-
+// Danh sách món ăn nổi bật với ảnh, mô tả, giá
 const featured = [
   {
     id: 1,
@@ -31,7 +32,13 @@ const featured = [
     price: 35000,
     image: khoaiChienImg,
   },
-  { id: 4, title: "Mì Ý", desc: "1 phần mì Ý", price: 40000, image: miYImg },
+  {
+    id: 4,
+    title: "Mì Ý",
+    desc: "1 phần mì Ý",
+    price: 40000,
+    image: miYImg,
+  },
 ];
 
 export default function Home() {
@@ -57,6 +64,7 @@ export default function Home() {
             </Col>
           ))}
         </Row>
+
         <Button
           as={Link}
           to="/menu"
