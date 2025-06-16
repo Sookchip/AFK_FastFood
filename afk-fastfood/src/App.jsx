@@ -13,6 +13,7 @@ import OrderHistory from "./pages/OrderHistory";
 import OrderTracking from "./pages/OrderTracking";
 import CartPage from "./pages/CartPage";
 import Profile from "./pages/Profile";
+import CheckoutPage from "./pages/CheckoutPage";
 import "./index.css";
 
 // Bao BrowserRouter trong component để dùng hook useLocation
@@ -39,6 +40,7 @@ function AppWrapper() {
           <Route path="/track" element={<OrderTracking />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
       </div>
 
