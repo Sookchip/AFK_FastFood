@@ -1,0 +1,126 @@
+
+.order-history-page .line {
+  height: 2px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+.fw-bold {
+  font-weight: bold !important;
+}
+.active-filter-btn {
+  border: 2px solid #000 !important; /* Viền đậm màu đen */
+  font-weight: normal !important;   /* Không in đậm chữ */
+  background-color: transparent !important; /* Giữ nền trong suốt */
+}
+
+.table td,
+.table th {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+/* Loại dịch vụ: chữ đầu căn đều thẳng hàng */
+.service-type {
+  text-align: left;
+  padding-left: 24px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* Tổng tiền: căn giữa số và chữ, nhưng chữ VND phải thẳng hàng */
+.amount-td {
+  text-align: center;
+}
+
+.amount-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  gap: 4px;
+}
+
+/* Số tiền */
+.amount-number {
+  text-align: right;
+  min-width: 90px;
+}
+
+/* VND thẳng hàng */
+.currency {
+  text-align: left;
+  min-width: 36px;
+}
+.modal-header.custom-header {
+  background-color: #ffc107; /* Màu vàng như nút Thoát */
+  justify-content: center;   /* Căn giữa nội dung */
+}
+
+.modal-header.custom-header .modal-title {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+/* OrderHistory.css */
+
+.alert-custom,
+.alert-custom.alert-danger {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1050;
+  background-color: #fff3cd; /* Màu vàng nhạt */
+  border: 1px solid #ffeeba;
+  padding: 15px 20px;
+  border-radius: 5px;
+  color: #000; /* Màu chữ đen */
+  display: flex;
+  align-items: center; /* ✅ Căn giữa biểu tượng và nội dung theo chiều dọc */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  animation: slideIn 0.3s ease-out;
+  gap: 10px;
+}
+
+/* Biểu tượng chấm than */
+.alert-icon {
+  font-size: 24px;
+  color: red; /* Màu đỏ */
+  margin-right: 10px;
+}
+
+/* Nút đóng ở góc phải trên cùng */
+.alert-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  line-height: 1;
+}
+
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Tăng kích thước modal */
+.custom-modal-lg .modal-dialog {
+  max-width: 800px; /* hoặc 900px tuỳ bạn */
+}
+
+.order-history-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.order-history-page {
+  flex: 1;
+}
+

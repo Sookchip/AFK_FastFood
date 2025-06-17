@@ -16,6 +16,7 @@ const Section = ({ title, items }) => (
   </section>
 );
 
+
 export default function Menu() {
   return (
     <Container className="mt-5 mb-5">

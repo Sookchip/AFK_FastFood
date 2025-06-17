@@ -13,7 +13,7 @@ import OrderHistory from "./pages/OrderHistory";
 import OrderTracking from "./pages/OrderTracking";
 import CartPage from "./pages/CartPage";
 import Profile from "./pages/Profile";
-import CheckoutPage from "./pages/CheckoutPage";
+
 import "./index.css";
 
 // Bao BrowserRouter trong component để dùng hook useLocation
@@ -30,12 +30,15 @@ function AppWrapper() {
           <HeroCarousel />
         </div>
       )}
+      
 
       <div className="container main-container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/party" element={<Party />} />
+          <Route path="/thanh-toan-momo" element={<ThanhToanMomo />} />
+          <Route path="/thanh-toan-ngan-hang" element={<ThanhToanNganHang />} />
           <Route path="/orders" element={<OrderHistory />} />
           <Route path="/track" element={<OrderTracking />} />
           <Route path="/cart" element={<CartPage />} />
