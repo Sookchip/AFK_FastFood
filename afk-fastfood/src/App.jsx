@@ -31,6 +31,7 @@ function AppWrapper() {
           <HeroCarousel />
         </div>
       )}
+      
 
       <div className="container main-container">
         <Routes>
