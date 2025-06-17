@@ -14,6 +14,8 @@ import OrderTracking from "./pages/OrderTracking";
 import CartPage from "./pages/CartPage";
 import Profile from "./pages/Profile";
 import CheckoutPage from "./pages/CheckoutPage";
+import ThanhToanMomo from "./pages/ThanhToanMomo";
+import ThanhToanNganHang from "./pages/ThanhToanNganHang";
 import "./index.css";
 
 // Bao BrowserRouter trong component để dùng hook useLocation
@@ -41,6 +43,8 @@ function AppWrapper() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/thanh-toan-momo" element={<ThanhToanMomo />} />
+          <Route path="/thanh-toan-ngan-hang" element={<ThanhToanNganHang />} />
         </Routes>
       </div>
 

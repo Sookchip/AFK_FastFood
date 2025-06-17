@@ -50,9 +50,6 @@ export default function CartPage() {
             <div className="fw-bold">{item.title}</div>
             <div>{item.price.toLocaleString()}đ</div>
             <div className="mt-1">
-              <span className="text-primary me-3" role="button">
-                Điều chỉnh
-              </span>
               <span
                 className="text-danger"
                 role="button"
@@ -98,11 +95,11 @@ export default function CartPage() {
           <span>{(total + 15000).toLocaleString()}đ</span>
         </div>
 
-        <div className="cart-buttons mt-4 d-flex gap-3">
-          <button className="checkout-button" onClick={handleCheckout}>
+        <div className="d-flex justify-content-end gap-3 mt-4">
+          <button className="btn btn-warning px-4" onClick={handleCheckout}>
             Thanh toán
           </button>
-          <button className="cancel-button btn btn-secondary" onClick={handleCancel}>
+          <button className="btn btn-secondary px-4" onClick={handleCancel}>
             Huỷ
           </button>
         </div>

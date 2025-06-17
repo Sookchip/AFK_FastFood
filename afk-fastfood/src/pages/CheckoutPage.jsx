@@ -1,4 +1,3 @@
-// src/pages/CheckoutPage.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaMoneyBillWave, FaUniversity, FaWallet } from "react-icons/fa";
@@ -7,6 +6,7 @@ import { useCart } from "../context/CartContext";
 export default function CheckoutPage() {
   const navigate = useNavigate();
   const { dispatch } = useCart();
+
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -49,14 +49,16 @@ export default function CheckoutPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      if (form.payment === "cash") {
-        setShowSuccessPopup(true);
-        dispatch({ type: "CLEAR" });
-        setTimeout(() => {
-          closePopup();
-        }, 3000);
+      if (form.payment === "momo") {
+        navigate("/thanh-toan-momo", { state: { form } });
+      } else if (form.payment === "bank") {
+        navigate("/thanh-toan-ngan-hang", { state: { form } });
       } else {
-        navigate("/order-success", { state: { form } });
+        dispatch({ type: "CLEAR" });
+        setShowSuccessPopup(true);
+        setTimeout(() => {
+          navigate("/", { state: { form } });
+        }, 3000);
       }
     }
   };
@@ -65,13 +67,13 @@ export default function CheckoutPage() {
     navigate("/cart");
   };
 
-  const closePopup = () => {
-    setShowSuccessPopup(false);
-    navigate("/");
-  };
-
   return (
     <div className="container my-5">
+      {showSuccessPopup && (
+        <div className="alert alert-success text-center" role="alert">
+          🎉 Đặt hàng thành công! Đang chuyển hướng về trang chủ...
+        </div>
+      )}
       <div className="card shadow-lg">
         <div className="card-body p-5">
           <h2 className="card-title mb-4 text-center">Thông tin giao hàng</h2>
@@ -180,10 +182,7 @@ export default function CheckoutPage() {
             </div>
 
             <div className="d-flex justify-content-end gap-3 mt-5">
-              <button
-                type="submit"
-                className="btn btn-warning px-4"
-              >
+              <button type="submit" className="btn btn-warning px-4">
                 Xác nhận
               </button>
               <button type="button" className="btn btn-secondary px-4" onClick={handleCancel}>
@@ -193,22 +192,6 @@ export default function CheckoutPage() {
           </form>
         </div>
       </div>
-
-      {/* Popup Thành công */}
-      {showSuccessPopup && (
-        <div
-          className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: 9999 }}
-        >
-          <div className="bg-white p-4 rounded shadow-lg text-center">
-            <h5 className="mb-3 text-success">🎉 Đặt hàng thành công!</h5>
-            <p>Cảm ơn bạn đã đặt hàng. Đơn hàng sẽ được xử lý sớm nhất.</p>
-            <button className="btn btn-primary mt-2" onClick={closePopup}>
-              Về trang chủ
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

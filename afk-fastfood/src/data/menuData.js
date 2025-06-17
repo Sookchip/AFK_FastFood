@@ -50,8 +50,8 @@ export const menuData = {
     {
       id: 1,
       title: "Gà Viên",
-      desc: "Gà Viên + Sốt Kem Chanh",
-      price: 65000,
+      desc: "Lắc vị cay hoặc sốt BBQ",
+      price: 61000,
       image: monMoi1,
     }, 
      
@@ -132,8 +132,8 @@ export const menuData = {
     {
       id: 3,
       title: "Gà Viên",
-      desc: "Gà Viên + Sốt Kem Chanh",
-      price: 65000,
+      desc: "Lắc vị cay hoặc sốt BBQ",
+      price: 61000,
       image: uuDai1,
     },
 

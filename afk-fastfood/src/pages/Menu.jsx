@@ -4,7 +4,7 @@ import ProductCard from "../components/ProductCard";
 import { menuData } from "../data/menuData";
 
 const Section = ({ title, items }) => (
-  <section className="my-5" id={title.toLowerCase().replace(/\s/g, "-")}>
+  <section className="my-5 text-center" id={title.toLowerCase().replace(/\s/g, "-")}>
     <h3 className="fw-bold mb-4">{title}</h3>
     <Row xs={1} sm={2} md={3} lg={4} className="g-4">
       {items.map((item) => (
