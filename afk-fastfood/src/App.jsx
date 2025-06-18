@@ -13,6 +13,9 @@ import OrderHistory from "./pages/OrderHistory";
 import OrderTracking from "./pages/OrderTracking";
 import CartPage from "./pages/CartPage";
 import Profile from "./pages/Profile";
+import CheckoutPage from "./pages/CheckoutPage";
+import ThanhToanMomo from "./pages/ThanhToanMomo";
+import ThanhToanNganHang from "./pages/ThanhToanNganHang";
 
 import "./index.css";
 
@@ -30,7 +33,6 @@ function AppWrapper() {
           <HeroCarousel />
         </div>
       )}
-      
 
       <div className="container main-container">
         <Routes>
