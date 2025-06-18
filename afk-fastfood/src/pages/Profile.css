@@ -1,0 +1,193 @@
+/* src/components/UserInformation.css */
+.user-information-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 60px); /* Adjust based on your header height */
+  box-sizing: border-box;
+}
+
+.header-nav {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.header-nav .nav-item {
+  margin-right: 5px;
+}
+
+.user-info-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px; /* Row gap, column gap */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group label .required {
+  color: red;
+  margin-left: 2px;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9; /* Light background for inputs */
+  color: #333;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.form-group input[readOnly] {
+  background-color: #e9ecef;
+  cursor: default;
+}
+
+.input-error {
+  border-color: red !important;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* src/components/UserInformation.css */
+/* ... (các CSS khác giữ nguyên) ... */
+
+.form-actions {
+  grid-column: span 2; /* Make buttons span both columns */
+  display: flex;
+  justify-content: flex-end; /* Thay đổi từ flex-start thành flex-end */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* ... (các CSS khác giữ nguyên) ... */
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.btn-primary {
+  background-color: #ff9933; /* Orange color from your design */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e68a2e;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #cccccc; /* Grey color from your design */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #b3b3b3;
+  transform: translateY(-1px);
+}
+
+/* Success message popup */
+.success-message-popup {
+  position: fixed;
+  top: 100px; /* Adjust as needed, below your header */
+  right: 20px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out forwards;
+  min-width: 280px;
+}
+
+.success-message-popup .check-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #28a745;
+}
+
+.success-message-popup .message-content strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.success-message-popup .message-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.success-message-popup .close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #155724;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.success-message-popup .close-button:hover {
+  color: #0c3d1d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .user-info-form {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
